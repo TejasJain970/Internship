@@ -11,3 +11,7 @@
 ## Day-3
 - Used pickle to serialize and deserialize data
 - Conversion of data between object format and binary format
+
+## Day-4 
+- Server for console based chat app/room
+- Used socket and select
