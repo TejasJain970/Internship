@@ -13,5 +13,9 @@
 - Conversion of data between object format and binary format
 
 ## Day-4 
-- Server for console based chat app/room
-- Used socket and select
+- Server for console based chat app/room using socket and select
+- Server receives chat log for all different clients
+
+## Day-5
+- Client for console based chat app/room using socket
+- Multiple users can connect and chat simultaneously to each other
