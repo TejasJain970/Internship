@@ -19,3 +19,8 @@
 ## Day-5
 - Client for console based chat app/room using socket
 - Multiple users can connect and chat simultaneously to each other
+
+## Day-6
+- For a common server compared 3 different clients using single processing, multi processing and threading respectively
+- Compared time difference of all three clients on a math sum for maximum 10000 iterations
+- single processing was slow, multi processing was significantly faster and threading was the fastest
