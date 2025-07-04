@@ -24,3 +24,8 @@
 - For a common server compared 3 different clients using single processing, multi processing and threading respectively
 - Compared time difference of all three clients on a math sum for maximum 10000 iterations
 - single processing was slow, multi processing was significantly faster and threading was the fastest
+
+## Day-7 & 8
+- Learned about web scraping using BeautifulSoup4 and requests
+- Created a program that web scraps country flag images for all countries on a wikipedia page
+- The program modifies url of all images as required and save the images as .svg file at the specified directory
