@@ -28,4 +28,9 @@
 ## Day-7 & 8
 - Learned about web scraping using BeautifulSoup4 and requests
 - Created a program that web scraps country flag images for all countries on a wikipedia page
-- The program modifies url of all images as required and save the images as .svg file at the specified directory
+- The program modifies url of all images as required and saves the images as .svg file at the specified directory
+
+## Day-9 & 10
+- Created a program to web scrap images (from pixabay.com) on a specific topic that is taken as input from the user
+- Used selenium with chrome web driver, BeatifulSoup4 and requests
+- The program also takes input for number of pages to be downloaded at the specified directory
