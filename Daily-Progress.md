@@ -34,3 +34,9 @@
 - Created a program to web scrap images (from pixabay.com) on a specific topic that is taken as input from the user
 - Used selenium with chrome web driver, BeatifulSoup4 and requests
 - The program also takes input for number of pages to be downloaded at the specified directory
+
+## Day-11 & 12
+- Created a program that web scraps 100 images on a topic that is taken as input from the user
+- It then creates 100 folders and stores 100 copies of each image in the respective folder
+- A slideshow video is then created for all images in each folder with 1 frame per second
+- The above processes take combined time of 4 minutes on average to complete with single processing
