@@ -38,5 +38,11 @@
 ## Day-11 & 12
 - Created a program that web scrapes 100 images on a topic that is taken as input from the user
 - It then creates 100 folders and stores 100 copies of each image in the respective folder
-- A slideshow video is then created for all images in each folder with 1 frame per second
+- A slideshow video is then created for all images in each folder with 1 frame per second i.e. an mp4 file of length 1:40
 - The above processes take combined time of 4 minutes on average to complete with single processing
+
+## Day-13 & 14
+- Created a program that web scrapes 1000 images on "nature"
+- It then creates 1000 folders and stores 1000 copies of each image in the respective folder
+- A slideshow video is then created for all images in each folder with 1 frame per second i.e. an mp4 file of length 16:40 
+- The above processes take combined time of 27 minutes on average to complete with mutlithreading on all of them
