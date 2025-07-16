@@ -86,10 +86,10 @@ class ImageScrape:
 def main():
     Start = time.perf_counter()
 
-    chromedriver_path = "F:\\Tejas\\RESOURCES\\Driver\\chromedriver.exe"
-    download_directory = "F:\\Downloads"
-    image_directory = "F:\\IMAGES"
-    video_directory = "F:\\VIDEOS"
+    chromedriver_path = "path_where_chromedriver_is_stored\\chromedriver.exe"
+    download_directory = "path_where_images_will_be_saved"
+    image_directory = "path_where_copies_will_be_saved"
+    video_directory = "path_where_videos_will_be_saved"
 
     scraper = ImageScrape(chromedriver_path=chromedriver_path)
     image_urls = scraper.scroll_extract()
