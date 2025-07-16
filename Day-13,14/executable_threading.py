@@ -18,7 +18,7 @@ def video(v):
 
     images = [img for img in os.listdir(image_folder)]
     frame = cv2.imread(os.path.join(image_folder, images[0]))
-    height, width, layers = frame.shape
+    height, width, _ = frame.shape
     size = (width, height)
 
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
