@@ -26,14 +26,12 @@ def scraper(image, number):
     
 Start = time.perf_counter()
   
-url = f'https://www.google.com/search?q=nature&sxsrf=AE3TifONYbl6Nk5o9M9hflMV0W-vnl5hvw:1752482949620&udm=2'
+url = f'https://www.google.com/search?q=nature&udm=2'
 
 options = Options()
 options.add_argument('--headless')
 options.add_argument('--disable-gpu')
 options.add_argument("--log-level=3")
-options.add_argument("--enable-javascript")
-options.add_experimental_option("prefs", {"profile.cookie_controls_mode": 0})
 
 service = Service(executable_path=chromedriver_path)
 
