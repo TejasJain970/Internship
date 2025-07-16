@@ -46,3 +46,10 @@
 - It then creates 1000 folders and stores 1000 copies of each image in the respective folder
 - A slideshow video is then created for all images in each folder with 1 frame per second i.e. an mp4 file of length 16:40 
 - The above processes take combined time of 27 minutes on average to complete with mutlithreading on all of them
+
+## Day-15 & 16
+- Combined scraper_threading.py and executable_threading.py into one file with only one ThreadPoolExecutor
+- Used an Object Oriented approach with 2 classes namely ImageTask and ImageScrape that contain many attributes and objects 
+- Implemented ThreadPoolExecutor with max_workers=200 to significantly improve time efficiency 
+- The code is executed in under 8 minutes on average with the help of multithreading
+- Also made a UML class diagram for the classes: ImageTask and ImageScrap 
