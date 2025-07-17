@@ -48,8 +48,9 @@
 - The above processes take combined time of 27 minutes on average to complete with mutlithreading on all of them
 
 ## Day-15 & 16
-- Combined scraper_threading.py and executable_threading.py into one file with only one ThreadPoolExecutor
+- Combined scraper_threading.py and executable_threading.py into one file with only one ThreadPoolExecutor/ProcessPoolExecutor
 - Used an Object Oriented approach with 2 classes namely ImageTask and ImageScrape that contain many attributes and objects 
-- Implemented ThreadPoolExecutor with max_workers=200 to significantly improve time efficiency 
-- The code is executed in under 8 minutes on average with the help of multithreading
-- Also made a UML class diagram for the classes: ImageTask and ImageScrap 
+- Implemented ThreadPoolExecutor with max_workers=200 and ProcessPoolExecutor with 12 logical processors 
+- Above significantly improves time efficiency with the script taking "<8mins" for ThreadPool and "<7mins" for ProcessPool on average
+- Also made a UML class diagram for the classes: ImageTask and ImageScrap
+- Also added screenshots (from task manager) of system load (CPU, GPU, RAM) when both scripts are executed 
