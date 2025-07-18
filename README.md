@@ -5,6 +5,7 @@
 
 - Created a server socket with a specific port and encoded data
 - Created a client socket and connected it to the port then decoded the data
+
 ![screenshot](Day-1/screenshot.png)
 
 ## Day-2
