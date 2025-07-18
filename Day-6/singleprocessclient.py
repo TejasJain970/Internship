@@ -21,7 +21,7 @@ while True:
                 continue
             break
 
-        except:
+        except Exception:
             print('Please enter valid integer ranging from 1 to 10000\n')
             continue
     
