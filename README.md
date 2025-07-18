@@ -53,4 +53,6 @@
 - Implemented ThreadPoolExecutor with max_workers=200 and ProcessPoolExecutor with 12 logical processors 
 - Above significantly improves time efficiency with the script taking "<8mins" for ThreadPool and "<7mins" for ProcessPool on average
 - Also made a UML class diagram for the classes: ImageTask and ImageScrape
-- Also added screenshots (from task manager) of system load (CPU, GPU, RAM) when both scripts are executed 
+- Also added screenshots (from task manager) of system load (CPU, GPU, RAM) when both scripts are executed
+
+![processCPU](Day-15,16/Screenshots/processCPU.png)
