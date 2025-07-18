@@ -66,14 +66,14 @@ for image in images:
         else:
             source = image['src']    
 
-    except:
+    except Exception:
         source = image['src']
 
     filename = f'image{i}.jpg'
     try:
         img = requests.get(source)
 
-    except:
+    except Exception:
         print(f'Error Saving {filename}')
         i += 1
         continue
