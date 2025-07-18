@@ -27,7 +27,7 @@ def receive(client_socket):
         message_length = int(message_header.decode('utf-8'))
         return{'header': message_header, 'data': client_socket.recv(message_length)}    
     
-    except:
+    except Exception:
         return False
     
 c_socket, c_address = s_socket.accept()
