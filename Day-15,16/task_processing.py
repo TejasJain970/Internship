@@ -10,7 +10,13 @@ import cv2
 import os
 
 class ImageTask:
-    def __init__(self, url, number, download_directory, image_directory, video_directory):
+    '''This class contains functions for all the tasks that are
+    performed on all images.'''
+    def __init__(self, url, number, 
+                 download_directory, 
+                 image_directory, 
+                 video_directory):
+        '''Initialize class variables'''
         self.url = url
         self.number = number
         self.download_directory = download_directory
@@ -18,6 +24,8 @@ class ImageTask:
         self.video_directory = video_directory
 
     def download(self):
+        '''This function downloads the images that were scraped from
+        google.'''
         filename = f'image{self.number}.jpg'
         img_url = requests.get(self.url)
         self.image_path = os.path.join(self.download_directory, filename)
@@ -25,6 +33,8 @@ class ImageTask:
             f.write(img_url.content)    
 
     def copy(self):
+        '''This function creates a new directory for each image and
+        makes 1000 copies for each image.'''
         folder = os.path.join(self.image_directory, f'image{self.number}')
         os.makedirs(folder, exist_ok=True)
         for j in range(1, 1001):
@@ -33,6 +43,8 @@ class ImageTask:
         self.copy_folder = folder
 
     def video(self):
+        '''This function creates a slideshow video for all image copies
+        in each created directory.'''
         images = [img for img in os.listdir(self.copy_folder)]
         frame = cv2.imread(os.path.join(self.copy_folder, images[0]))
         height, width, _ = frame.shape
@@ -47,18 +59,24 @@ class ImageTask:
         video.release()        
 
     def task(self):
+        '''This function runs all three (download, copy, video).'''
         self.download()
         self.copy()
         self.video()
         print(f'Task Completed Successfully for image{self.number}.jpg')
 
 class ImageScrape:
+    '''This class contains functions to setup chrome webdriver and scrape
+    images.'''
     def __init__(self, chromedriver_path ):
+        '''Initialize class variables'''
         self.url = "https://google.com/search?q=nature&udm=2"
         self.chromedriver_path = chromedriver_path
         self.driver = self.driver_setup()
         
     def driver_setup(self):
+        '''This function initializes options and services for the chrome
+        webdriver.'''
         options = Options()
         options.add_argument('--headless')
         options.add_argument('--disable-gpu')
@@ -67,6 +85,8 @@ class ImageScrape:
         return webdriver.Chrome(service=service, options=options)
 
     def scroll_extract(self, max=1000):
+        '''This function scrolls the webpage to the end and then makes a
+        list for all the extracted image urls.'''
         urls = []
         while len(urls) < max:
             self.driver.get(self.url)   
@@ -84,6 +104,8 @@ class ImageScrape:
         return urls[:max]
 
 def main():
+    '''The main function initializes all paths, executes the
+    ThreadPoolExecutor and calculates the total time taken.'''
     Start = time.perf_counter()
 
     chromedriver_path = "path_where_chromedriver_is_stored\\chromedriver.exe"
@@ -96,11 +118,12 @@ def main():
 
     with concurrent.futures.ProcessPoolExecutor() as executor:
         for i, url in enumerate(image_urls, start=1):
-            tasks = ImageTask(url, i, download_directory, image_directory, video_directory)
+            tasks = ImageTask(url, i, download_directory,
+                              image_directory, video_directory)
             executor.submit(tasks.task)
 
     Finish = time.perf_counter()
     print(f'Executed in {round((Finish-Start)/60, 3)} Minutes...')
 
 if __name__ == '__main__':
-    main()  
+    main()
