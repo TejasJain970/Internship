@@ -56,7 +56,7 @@ while True:
             continue
         break
 
-    except:
+    except Exception:
         print('\nPlease enter a valid integer !')
         continue   
 
