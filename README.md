@@ -101,6 +101,8 @@
 - Also made a UML class diagram for the classes: ImageTask and ImageScrape
 - Also added screenshots (from task manager) of system load (CPU, GPU, RAM) when both scripts are executed
 
+### Multiprocessing
+
 ![processCPU](Day-15,16/Screenshots/processCPU.png)
 
 ![processGPU](Day-15,16/Screenshots/processGPU.png)
@@ -108,6 +110,8 @@
 ![processRAM](Day-15,16/Screenshots/processRAM.png)
 
 ![processTIME](Day-15,16/Screenshots/processTIME.png)
+
+### Multithreading
 
 ![threadCPUaverage](Day-15,16/Screenshots/threadCPUaverage.png)
 
