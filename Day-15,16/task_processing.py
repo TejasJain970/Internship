@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.service import Service
 import concurrent.futures
 import requests
 import shutil
+import psutil
 import time
 import cv2
 import os
@@ -113,10 +114,13 @@ def main():
     image_directory = "path_where_copies_will_be_saved"
     video_directory = "path_where_videos_will_be_saved"
 
+    p = psutil.Process(os.getpid())
+    p.nice(psutil.HIGH_PRIORITY_CLASS)
+
     scraper = ImageScrape(chromedriver_path=chromedriver_path)
     image_urls = scraper.scroll_extract()
 
-    with concurrent.futures.ProcessPoolExecutor() as executor:
+    with concurrent.futures.ProcessPoolExecutor(max_workers=os.cpu_count()) as executor:
         for i, url in enumerate(image_urls, start=1):
             tasks = ImageTask(url, i, download_directory,
                               image_directory, video_directory)
