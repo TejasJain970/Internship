@@ -26,7 +26,7 @@ def scraper(image, number):
     
 Start = time.perf_counter()
   
-url = f'https://www.google.com/search?q=nature&udm=2'
+url = 'https://www.google.com/search?q=nature&udm=2'
 
 options = Options()
 options.add_argument('--headless')
