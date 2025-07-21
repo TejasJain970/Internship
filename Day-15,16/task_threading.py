@@ -5,6 +5,7 @@ from selenium.webdriver.chrome.service import Service
 import concurrent.futures
 import requests
 import shutil
+import psutil
 import time
 import cv2
 import os
@@ -112,6 +113,9 @@ def main():
     download_directory = "path_where_images_will_be_saved"
     image_directory = "path_where_copies_will_be_saved"
     video_directory = "path_where_videos_will_be_saved"
+
+    p = psutil.Process(os.getpid())
+    p.nice(psutil.HIGH_PRIORITY_CLASS)
 
     scraper = ImageScrape(chromedriver_path=chromedriver_path)
     image_urls = scraper.scroll_extract()
