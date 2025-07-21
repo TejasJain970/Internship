@@ -53,7 +53,7 @@ with concurrent.futures.ThreadPoolExecutor(24) as executor:
     executor.map(copier, range(1, scraper_threading.image_count + 1))
 
 print(f'\nCopied {scraper_threading.image_count*scraper_threading.image_count} images in {scraper_threading.image_count} folders with {scraper_threading.image_count} copies in each folder respectively')
-print(f'Creating videos for all images in all the folders.....')
+print('Creating videos for all images in all the folders.....')
 
 with concurrent.futures.ThreadPoolExecutor(24) as executor:
     executor.map(video, range(1, scraper_threading.image_count + 1))
