@@ -37,7 +37,7 @@ while k <= image_scraper.j:
     j = 1
     k += 1
 print(f'\nCopied {image_scraper.j*image_scraper.j} images in {image_scraper.j} folders with {image_scraper.j} copies in each folder respectively')
-print(f'Creating videos for all images in all the folders.....')
+print('Creating videos for all images in all the folders.....')
 
 while v <= image_scraper.j:
     image_folder = f'path_where_directories_are_stored\\image{v}'
