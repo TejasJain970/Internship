@@ -6,35 +6,33 @@
 - Created a server socket with a specific port and encoded data
 - Created a client socket and connected it to the port then decoded the data
 
-![screenshot](Day-1/screenshot.png)
+![screenshot](Day-17,18/UML Day-1.png)
 
 ## Day-2
 
 - Added a header to track the size of data
 - Used a fixed buffer to decode the data
 
-![screenshot](Day-2/screenshot.png)
+![screenshot](Day-17,18/UML Day-2.png)
 
 ## Day-3
 
 - Used pickle to serialize and deserialize data
 - Conversion of data between object format and binary format
 
-![screenshot](Day-3/screenshot.png)
+![screenshot](Day-17,18/UML Day-3.png)
 
 ## Day-4
 
 - Server for console based chat app/room using socket and select
 - Server receives chat log for all different clients
 
-![screenshot](Day-4/screenshot.png)
-
 ## Day-5
 
 - Client for console based chat app/room using socket
 - Multiple users can connect and chat simultaneously to each other
 
-![screenshot](Day-5/screenshot.png)
+![screenshot](Day-17,18/UML Day-4,5.png)
 
 ## Day-6
 
@@ -42,11 +40,7 @@
 - Compared time difference of all three clients on a math sum for maximum 10000 iterations
 - single processing was slow, multi processing was significantly faster and threading was the fastest
 
-![screenshot1](Day-6/Screenshots/screenshot1.png)
-
-![screenshot2](Day-6/Screenshots/screenshot2.png)
-
-![screenshot3](Day-6/Screenshots/screenshot3.png)
+![screenshot](Day-17,18/UML Day-6.png)
 
 ## Day-7 & 8
 
@@ -122,3 +116,9 @@
 ![threadRAM](Day-15,16/Screenshots/threadRAM.png)
 
 ![threadTIME](Day-15,16/Screenshots/threadTIME.png)
+
+## Day-17 & 18
+
+- Created UML diagrams for Day-1 to Day-6
+- Impoved the respective codes for all days and used Ruff for linting
+- Added screenshots for all files i.e. cmd window and file explorer 
