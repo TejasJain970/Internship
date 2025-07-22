@@ -10,6 +10,9 @@ import time
 import cv2
 import os
 
+p = psutil.Process(os.getpid())
+p.nice(psutil.ABOVE_NORMAL_PRIORITY_CLASS)
+
 class ImageTask:
     '''This class contains functions for all the tasks that are
     performed on all images.'''
@@ -52,7 +55,7 @@ class ImageTask:
         size = (width, height)
         video_path = os.path.join(self.video_directory, f'video{self.number}.mp4')
         fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-        video = cv2.VideoWriter(video_path, fourcc, 0.5, size)
+        video = cv2.VideoWriter(video_path, fourcc, 1, size)
         for image_name in images:
             img_path = os.path.join(self.copy_folder, image_name)
             img_read = cv2.imread(img_path)
@@ -114,13 +117,10 @@ def main():
     image_directory = "path_where_copies_will_be_saved"
     video_directory = "path_where_videos_will_be_saved"
 
-    p = psutil.Process(os.getpid())
-    p.nice(psutil.HIGH_PRIORITY_CLASS)
-
     scraper = ImageScrape(chromedriver_path=chromedriver_path)
     image_urls = scraper.scroll_extract()
 
-    with concurrent.futures.ThreadPoolExecutor(max_workers=200) as executor:
+    with concurrent.futures.ThreadPoolExecutor(max_workers=32) as executor:
         for i, url in enumerate(image_urls, start=1):
             tasks = ImageTask(url, i, download_directory,
                               image_directory, video_directory)
