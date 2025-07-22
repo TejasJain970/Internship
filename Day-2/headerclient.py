@@ -18,14 +18,14 @@ while True:
             break
 
         if new_msg:
-            print(f"New Message Lenght: {msg[:HEADERSIZE]}")
+            print(f"New Message Length: {msg[:HEADERSIZE]}")
             msglength = int(msg[:HEADERSIZE])
             new_msg = False
 
-        print(f"Full Message Lenght: {msglength}")
+        print(f"Full Message Length: {msglength}")
 
         full_msg = full_msg + msg.decode("utf-8")
-        print("Lenght of Decoded Message:",len(full_msg))
+        print("Length of Decoded Message:",len(full_msg))
 
         if len(full_msg) - HEADERSIZE == msglength:
             print(f"Full Message Received: {full_msg[HEADERSIZE:]}")
