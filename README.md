@@ -6,21 +6,21 @@
 - Created a server socket with a specific port and encoded data
 - Created a client socket and connected it to the port then decoded the data
 
-![screenshot](Day-17,18/UML Day-1.png)
+![screenshot](Day-17,18/UML%20Day-1.png)
 
 ## Day-2
 
 - Added a header to track the size of data
 - Used a fixed buffer to decode the data
 
-![screenshot](Day-17,18/UML Day-2.png)
+![screenshot](Day-17,18/UML%20Day-2.png)
 
 ## Day-3
 
 - Used pickle to serialize and deserialize data
 - Conversion of data between object format and binary format
 
-![screenshot](Day-17,18/UML Day-3.png)
+![screenshot](Day-17,18/UML%20Day-3.png)
 
 ## Day-4
 
@@ -32,7 +32,7 @@
 - Client for console based chat app/room using socket
 - Multiple users can connect and chat simultaneously to each other
 
-![screenshot](Day-17,18/UML Day-4,5.png)
+![screenshot](Day-17,18/UML%20Day-4,5.png)
 
 ## Day-6
 
@@ -40,7 +40,7 @@
 - Compared time difference of all three clients on a math sum for maximum 10000 iterations
 - single processing was slow, multi processing was significantly faster and threading was the fastest
 
-![screenshot](Day-17,18/UML Day-6.png)
+![screenshot](Day-17,18/UML%20Day-6.png)
 
 ## Day-7 & 8
 
