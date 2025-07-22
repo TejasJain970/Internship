@@ -90,7 +90,7 @@
 
 - Combined scraper_threading.py and executable_threading.py into one file with only one ThreadPoolExecutor/ProcessPoolExecutor
 - Used an Object Oriented approach with 2 classes namely ImageTask and ImageScrape that contain many attributes and objects 
-- Implemented ThreadPoolExecutor with max_workers=200 and ProcessPoolExecutor with 12 logical processors 
+- Implemented ThreadPoolExecutor with max_workers=32 and ProcessPoolExecutor with max_workers=os.cpu_count()
 - Above significantly improves time efficiency with the script taking "<8mins" for ThreadPool and "<7mins" for ProcessPool on average
 - Also made a UML class diagram for the classes: ImageTask and ImageScrape
 - Also added screenshots (from task manager) of system load (CPU, GPU, RAM) when both scripts are executed
@@ -121,4 +121,4 @@
 
 - Created UML diagrams for Day-1 to Day-6
 - Impoved the respective codes for all days and used Ruff for linting
-- Added screenshots for all files i.e. cmd window and file explorer 
+- Added screenshots for all files including cmd window and file explorer 
