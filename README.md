@@ -95,30 +95,21 @@
 - Also made a UML class diagram for the classes: ImageTask and ImageScrape
 - Also added screenshots (from task manager) of system load (CPU, GPU, RAM) when both scripts are executed
 
-### Multiprocessing
-
-![processCPU](Day-15,16/Screenshots/processCPU.png)
-
-![processGPU](Day-15,16/Screenshots/processGPU.png)
-
-![processRAM](Day-15,16/Screenshots/processRAM.png)
-
-![processTIME](Day-15,16/Screenshots/processTIME.png)
-
-### Multithreading
-
-![threadCPUaverage](Day-15,16/Screenshots/threadCPUaverage.png)
-
-![threadCPUhighest](Day-15,16/Screenshots/threadCPUhighest.png)
-
-![threadGPU](Day-15,16/Screenshots/threadGPU.png)
-
-![threadRAM](Day-15,16/Screenshots/threadRAM.png)
-
-![threadTIME](Day-15,16/Screenshots/threadTIME.png)
+![UML_class_diagram](Day-15,16/UML_class_diagram.png)
 
 ## Day-17 & 18
 
 - Created UML diagrams for Day-1 to Day-6
 - Impoved the respective codes for all days and used Ruff for linting
-- Added screenshots for all files including cmd window and file explorer 
+- Added screenshots for all files including cmd window and file explorer
+- Learned basics of Doxygen, Sphinx, PlantUML, Ruff(linter and formatter)
+
+## Day-19 & 20
+
+- Added a function that logs information about time, image, CPU and memory usage in a .txt
+- Also added a function that plots graph for the CPU and memory values logged in previous function
+- Improved average time efficiency by setting Above Normal Priority for all python processes
+- Updated the UML class diagram
+
+![graph](Day-19,20/graph.png)
+![UML_class_diagram](Day-19,20/UML_class_diagram.png)
