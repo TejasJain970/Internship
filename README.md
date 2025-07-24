@@ -108,8 +108,9 @@
 
 - Added a function that logs information about time, image, CPU and memory usage in a .txt
 - Also added a function that plots graph for the CPU and memory values logged in previous function
-- Improved average time efficiency by setting Above Normal Priority for all python processes
-- Updated the UML class diagram
+- Object oriented approach with 2 classes namely ImageTaskLog and ImageScrap
+- Improved time efficiency by setting Above Normal Priority for all python processes so that CPU and memory can be fully utilised
+- Updated the UML class diagram for 2 classes: ImageTaskLog and ImageScrap
 
 ![graph](Day-19,20/graph.png)
 ![UML_class_diagram](Day-19,20/UML_class_diagram.png)
