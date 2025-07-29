@@ -167,7 +167,7 @@ def main():
     download_directory = "path_where_images_will_be_saved"
     image_directory = "path_where_copies_will_be_saved"
     video_directory = "path_where_videos_will_be_saved"
-    log_directory = "path_where_.txt_file_is_stored\\system_usage_log.txt"
+    log_directory = "path_where_.txt_file_is_stored\\filename.txt"
 
     scraper = ImageScrape(chromedriver_path=chromedriver_path)
     image_urls = scraper.scroll_extract()
@@ -177,6 +177,7 @@ def main():
         f.write("### CPU & RAM Log Start ###\n\n")
         f.write(f'{round(Initial - Start)} seconds(s) were taken by Chrome web driver to start and load the webpage till the end\n\n')
 
+    ## Switch Between ProcessPoolExecutor(max_workers=os.cpu_count()) and ThreadPoolExecutor(max_workers=32)
     with concurrent.futures.ProcessPoolExecutor(max_workers=os.cpu_count()) as executor:
         for i, url in enumerate(image_urls, start=1):
             tasks = ImageTaskLog(url, i, download_directory,
