@@ -112,5 +112,12 @@
 - Improved time efficiency by setting Above Normal Priority for all python processes so that CPU and memory can be fully utilised
 - Updated the UML class diagram for 2 classes: ImageTaskLog and ImageScrap
 
-![graph](Day-19,20/graph.png)
 ![UML_class_diagram](Day-19,20/UML_class_diagram.png)
+
+### Multi-Processing
+
+![processGRAPH](Day-19,20/processGRAPH.png)
+
+### Multi-Threading
+
+![threadGRAPH](Day-19,20/threadGRAPH.png)
